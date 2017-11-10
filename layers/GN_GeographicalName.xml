@@ -1,0 +1,54 @@
+<FeatureLayers configVersion="3.2.0" 
+               xmlns="http://www.deegree.org/layers/feature" 
+               xmlns:s="http://www.deegree.org/metadata/spatial" 
+               xmlns:l="http://www.deegree.org/layers/base" 
+               xmlns:d="http://www.deegree.org/metadata/description" 
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+               xsi:schemaLocation="http://www.deegree.org/layers/feature http://schemas.deegree.org/layers/feature/3.2.0/feature.xsd">
+    <FeatureStoreId>geonames</FeatureStoreId>
+    <FeatureLayer>
+        <!-- The FeatureType can be used to restrict a layer to a specific feature type (use a qualified name). -->
+        <FeatureType xmlns:gn="http://inspire.ec.europa.eu/schemas/gn/4.0">gn:NamedPlace</FeatureType>
+        <l:Name>GN.NamedPlace</l:Name>
+        <d:Title>GN.NamedPlace</d:Title>
+        <d:Abstract>
+            Geographical names of municipalities or parts thereof, landscapes, mountain ranges, mountains, islands, rivers, canals, lakes, seas, etc. Data is provided for the Federal Republic of Germany.
+        </d:Abstract>
+        <d:Keywords>
+            <d:Keyword>Geographical Names</d:Keyword>
+            <d:Keyword>Geonames</d:Keyword>
+            <d:Keyword>NamedPlace</d:Keyword>
+            <d:Keyword>GN</d:Keyword>
+            <d:Type codeSpace='none'>unknown</d:Type>
+        </d:Keywords>
+
+        <!-- The spatial metadata is used to describe coordinate systems and envelopes.
+         Typically,the layers can retrieve the native coordinate system and envelope
+         from the data source,but sometimes it may be desirable to define a special extent,
+         or add more coordinate systems. -->
+        <!--
+    <s:Envelope crs='EPSG:25832'>
+      <s:LowerCorner>204485 5204122</s:LowerCorner>
+      <s:UpperCorner>1008600 6134557</s:UpperCorner>
+    </s:Envelope>
+    -->
+        <s:CRS>EPSG:4258 EPSG:4326 EPSG:3857 EPSG:3034 EPSG:3035 EPSG:31466 EPSG:31467 EPSG:31468 EPSG:31469 EPSG:2397 EPSG:2398 EPSG:2399 EPSG:25832 EPSG:25833 EPSG:32632 EPSG:32633 EPSG:3044 EPSG:3045 EPSG:4839</s:CRS>
+
+        <l:StyleRef>
+            <l:StyleStoreId>GN_GeographicalName</l:StyleStoreId>
+            <l:Style>
+                <!-- The StyleName specifies the name under which the style will be known in the WMS -->
+                <l:StyleName>GN.NamedPlace.Default</l:StyleName>
+                <!-- The LayerNameRef and StyleNameRef are used to extract the style from the style store -->
+                <l:LayerNameRef>GN.NamedPlace.Default</l:LayerNameRef>
+                <l:StyleNameRef>GN.NamedPlace.Default</l:StyleNameRef>
+            </l:Style>
+        </l:StyleRef>     
+        <l:LayerOptions>
+            <l:RenderingQuality>NORMAL</l:RenderingQuality>
+            <!-- Anzahl der Features die gleichzeitig gerendert werden -->
+            <l:MaxFeatures>5000</l:MaxFeatures>
+        </l:LayerOptions>        
+    </FeatureLayer>
+    <!-- Here more FeatureLayer elements can be added. -->
+</FeatureLayers>

@@ -1,0 +1,96 @@
+<deegreeServicesMetadata configVersion="3.0.0"
+                         xmlns="http://www.deegree.org/services/metadata" 
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:schemaLocation="http://www.deegree.org/services/metadata http://schemas.deegree.org/services/metadata/3.0.0/metadata.xsd">
+  <ServiceIdentification>
+    <Title>WMS Geographical Names INSPIRE</Title>
+    <Abstract>
+      INSPIRE View Service for Geographical Names of municipalities or parts thereof, landscapes, mountain ranges, mountains, islands, rivers, canals, lakes, seas, etc. 
+      Data is provided for the area of the Federal Republic of Germany. The dataset is structured according to the INSPIRE Annex I Theme - Geographical Names.
+      &lt;br/&gt;
+      The selection of the geographical names is based on the map scale 1 : 250 000. and is derived from following sources:
+      &lt;ul&gt;
+        &lt;li&gt;registers of the statistical offices of the Länder (federal states)&lt;/li&gt;
+        &lt;li&gt;Federal Statistical Office (populations, Regional and Official Municipality Key)&lt;/li&gt;
+        &lt;li&gt;Digital Landscape Models 1 : 250 000 (DLM250)&lt;/li&gt;
+        &lt;li&gt;Digital Elevation Model DGM 25 (for determination of the calculated heights with locations)&lt;/li&gt;
+      &lt;/ul&gt;        
+      This service is published under the Ordinance to Determine the Conditions for Use for the Provision of Spatial Data of the Federation (GeoNutzV) and thereof free of charge.
+    </Abstract>
+    <Keywords>
+        <Keyword>WMS</Keyword>
+        <Keyword>infoMapAccessService</Keyword>
+        <Keyword>ViewService</Keyword>
+        <Keyword>INSPIRE:ViewService</Keyword>
+        <Keyword>INSPIRE</Keyword>
+        <Keyword>Geographical Names</Keyword>
+        <Keyword>Geonames</Keyword>
+        <Keyword>Geographische Namen</Keyword>
+        <Keyword>Deutschland</Keyword>
+        <Keyword>BKG</Keyword>
+    </Keywords>
+    <Fees>none</Fees>
+    <AccessConstraints>
+      Verordnung zur Festlegung der Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes (GeoNutzV) vom 19. März 2013 
+      (Bundesgesetzblatt Jahrgang 2013 Teil I Nr. 14), 
+      URL: http://www.geodatenzentrum.de/docpdf/geonutzv.pdf
+    </AccessConstraints>    
+  </ServiceIdentification>
+
+  <ServiceProvider>
+    <ProviderName>Dienstleistungszentrum des Bundes für Geoinformation und Geodäsie</ProviderName>
+    <ProviderSite>http://www.geodatenzentrum.de</ProviderSite>
+    <ServiceContact>
+      <IndividualName/>
+      <PositionName>Technischer Administrator</PositionName>
+      <Phone>+49 (0) 341 5634 333</Phone>
+      <Facsimile>+49 (0) 341 5634 415</Facsimile>
+      <ElectronicMailAddress>dlz@bkg.bund.de</ElectronicMailAddress>
+      <Address>
+        <DeliveryPoint>Karl-Rothe-Str. 10-14</DeliveryPoint>
+        <City>Leipzig</City>
+        <AdministrativeArea>DE-SN</AdministrativeArea>
+        <PostalCode>04105</PostalCode>
+        <Country>Deutschland</Country>
+      </Address>
+      <OnlineResource>http://www.geodatenzentrum.de</OnlineResource>
+      <!-- HoursOfService>24x7</HoursOfService>
+      <ContactInstructions>Do not hesitate to call</ContactInstructions-->
+      <Role>PointOfContact</Role>
+    </ServiceContact>
+  </ServiceProvider>
+    
+  <DatasetMetadata>
+    <!--MetadataUrlTemplate>https://registry.gdi-de.org/id/de.bund.bkg.csw/${metadataSetId}</MetadataUrlTemplate-->
+    <MetadataUrlTemplate>http://mis.bkg.bund.de/geonetwork/srv/eng/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;resultType=results&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;outputFormat=application/xml&amp;typeNames=csw:Record&amp;elementSetName=full&amp;id=${metadataSetId}</MetadataUrlTemplate>
+    <ExternalMetadataAuthority name="BKG">https://registry.gdi-de.org/id/de.bund.bkg.csw/</ExternalMetadataAuthority>
+    <Dataset xmlns:gn="http://inspire.ec.europa.eu/schemas/gn/4.0">
+      <Name>GN.NamedPlace</Name>                                            <!-- Layername wie im theme definiert! --> 
+      <Title>GN.NamedPlace</Title>                                          <!-- can be multilingual by using the lang attribute-->
+      <Abstract>Harmonized INSPIRE Geographical Names (Annex I)</Abstract>  <!-- can be multilingual by using the lang attribute-->
+      <!--MetadataSetId>DEBKG00M00000129</MetadataSetId-->
+      <MetadataSetId>142d56bb-108b-4e6a-96a6-8239b80af77e</MetadataSetId>
+      <ExternalMetadataSetId authority="BKG">https://registry.gdi-de.org/id/de.bund.bkg.csw/DEBKG00M00000187</ExternalMetadataSetId>
+    </Dataset>
+  </DatasetMetadata>
+    
+  <ExtendedCapabilities protocolVersions="1.3.0">
+    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" 
+                                     xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" 
+                                     xsi:schemaLocation="http://inspire.ec.europa.eu/schemas/common/1.0 http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd">
+      <inspire_common:MetadataUrl>
+        <inspire_common:URL>http://mis.bkg.bund.de/geonetwork/srv/eng/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;resultType=results&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;outputFormat=application/xml&amp;typeNames=csw:Record&amp;elementSetName=full&amp;id=cd7b8516-bbe3-4836-9ed8-b49b6d279932</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.iso.19139+xml</inspire_common:MediaType>
+      </inspire_common:MetadataUrl>
+      <inspire_common:SupportedLanguages>
+        <inspire_common:DefaultLanguage>
+          <inspire_common:Language>eng</inspire_common:Language>
+        </inspire_common:DefaultLanguage>
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+        <inspire_common:Language>eng</inspire_common:Language>
+      </inspire_common:ResponseLanguage>
+    </inspire_vs:ExtendedCapabilities>
+  </ExtendedCapabilities>
+
+</deegreeServicesMetadata>
