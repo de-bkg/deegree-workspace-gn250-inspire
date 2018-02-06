@@ -15,7 +15,10 @@
         &lt;li&gt;Digital Landscape Models 1 : 250 000 (DLM250)&lt;/li&gt;
         &lt;li&gt;Digital Elevation Model DGM 25 (for determination of the calculated heights with locations)&lt;/li&gt;
       &lt;/ul&gt;        
-      This service is published under the Ordinance to Determine the Conditions for Use for the Provision of Spatial Data of the Federation (GeoNutzV) and thereof free of charge.
+      This service is published under the Ordinance to Determine the Conditions for Use for the Provision of Spatial Data of the Federation (GeoNutzV) and thereof free of charge.&lt;br/&gt;
+      &lt;b&gt;Important note:&lt;/b&gt; From now on this service will be accessible under the new URL http://sg.geodatenzentrum.de/wms_gn250_inspire, in order to harmonize the product 
+      names of our INSPIRE services. The old URL http://sg.geodatenzentrum.de/wms_geonames will be disabled end of April 2018.&lt;br/&gt;
+      Please register at our information service (http://www.geodatenzentrum.de/geodaten/gdz?l=infodienst) to be automatically informed on planed maintenance or changes.
     </Abstract>
     <Keywords>
         <Keyword>WMS</Keyword>

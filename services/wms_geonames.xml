@@ -5,9 +5,6 @@
 
   <ServiceConfiguration>
     <ThemeId>GN_GeographicalName</ThemeId>
-    <!-- here we can add more themes: -->
-    <!--ThemeId>AU_AdministrativeUnit</ThemeId>
-    <ThemeId>CP_CadastralParcel</ThemeId-->
   </ServiceConfiguration>
   
 </deegreeWMS>
